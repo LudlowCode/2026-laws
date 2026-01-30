@@ -1,0 +1,9 @@
+body{
+    color:darkslategrey;
+    font-family:Helvetica, Arial, sans-serif;
+    background-color: antiquewhite;
+}
+#john {
+    width: 20%;
+    float: right;
+}
