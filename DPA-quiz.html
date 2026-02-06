@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Protection Act 2018 Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>Data Protection Act 2018 Quiz</h1>
+    <p>Answer the questions below and click <strong>Mark Quiz</strong> to see your results.</p>
+
+    <div class="question" id="q1">
+        <h3>The Data Protection Act 2018 in the UK mostly implements which previous legislation?</h3>
+        <div class="options">
+            <label>
+                <input type="radio" name="q1" value="foi" />
+                Freedom of Information (FOI)
+            </label><br />
+            <label>
+                <input type="radio" name="q1" value="gdpr" />
+                GDPR
+            </label><br />
+            <label>
+                <input type="radio" name="q1" value="dpa-98" />
+                Data Protection Act 1998
+            </label>
+        </div>
+        <div class="feedback" id="q1-feedback"></div>
+    </div>
+
+    <div class="question" id="q2">
+        <h3>Select the organisation in charge of adherence to the DPA in the UK.</h3>
+        <div class="options">
+            <select id="q2-select">
+                <option value="" selected disabled>-- choose an option --</option>
+                <option value="ico">Information Commissioner's Office</option>
+                <option value="controller">Data controller</option>
+                <option value="subject">Data subject</option>
+            </select>
+        </div>
+        <div class="feedback" id="q2-feedback"></div>
+    </div>
+
+    <div class="question" id="q3">
+        <h3>Which of these is a data subject right under the DPA 2018?</h3>
+        <div class="options">
+            <label>
+                <input type="radio" name="q3" value="erasure" />
+                Right to erasure (in certain circumstances)
+            </label><br />
+            <label>
+                <input type="radio" name="q3" value="sell" />
+                Right to require organisations to sell data to third parties
+            </label><br />
+            <label>
+                <input type="radio" name="q3" value="collect-anything" />
+                Right to allow organisations to collect any personal data without limits
+            </label>
+        </div>
+        <div class="feedback" id="q3-feedback"></div>
+    </div>
+
+    <div class="question" id="q4">
+        <h3>Sensitive data requires additional protection. Which is an example of sensitive data?</h3>
+        <div class="options">
+            <select id="q4-select">
+                <option value="" selected disabled>-- choose an option --</option>
+                <option value="postcode">Postcode</option>
+                <option value="religion">Religion</option>
+                <option value="job-title">Job title</option>
+            </select>
+        </div>
+        <div class="feedback" id="q4-feedback"></div>
+    </div>
+
+    <div class="question" id="q5">
+        <h3>Data should be kept no longer than necessary. Which principle is this?</h3>
+        <div class="options">
+            <label>
+                <input type="radio" name="q5" value="storage-limitation" />
+                Storage limitation
+            </label><br />
+            <label>
+                <input type="radio" name="q5" value="accuracy" />
+                Accuracy
+            </label><br />
+            <label>
+                <input type="radio" name="q5" value="lawfulness" />
+                Lawfulness, fairness and transparency
+            </label>
+        </div>
+        <div class="feedback" id="q5-feedback"></div>
+    </div>
+
+    <div class="controls">
+        <button id="mark-quiz" onclick="markQuiz()">Mark Quiz</button>
+        <button id="reset-quiz" onclick="resetQuiz()">Reset</button>
+    </div>
+
+    <div id="score"></div>
+
+</body>
+
+</html>
