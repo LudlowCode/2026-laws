@@ -53,7 +53,7 @@ function markQuiz() {
 
     // --- Q3 (radio) ---
     const q3Selected = document.querySelector('input[name="q3"]:checked');
-    if (q3Selected && q3Selected.value === answers['.q3']) {
+    if (q3Selected && q3Selected.value === answers['q3']) {
         score++;
         setFeedback("q3", true, correctFeedback['q3']);
     } else {
