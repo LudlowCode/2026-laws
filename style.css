@@ -4,6 +4,17 @@ body {
     background-color:aliceblue;
 
 }
+blockquote{
+    font-style: italic;
+    color: #6c757d;
+    line-height: 1.2em;
+}
+li{
+    padding:0.6rem 0 0 1.5rem;
+}
+/* blockquote ul li{
+    padding: 0.6rem 0 0 1.5rem;    
+} */
 
 
 .question {
