@@ -6,7 +6,8 @@ function markQuiz() {
         q2: "ico",
         q3: "erasure",
         q4: "religion",
-        q5: "storage-limitation"
+        q5: "storage-limitation",
+        q6: ["red", "green"]
     };
 
     let correctFeedback = {
@@ -14,7 +15,8 @@ function markQuiz() {
         q2: "The ICO is a crown body and (as of 2026) its head (The Data Commissioner) is John Edwards",
         q3: "The right to erasure applies in specific circumstances.",
         q4: "Religion is sensitive data because of its potential for misuse.",
-        q5: "Keep data no longer than necessary = storage limitation."
+        q5: "Keep data no longer than necessary = storage limitation.",
+        q6: "The best colours are red and green"
     };
 
     let incorrectFeedback = {
@@ -22,11 +24,13 @@ function markQuiz() {
         q2: "This is not the organisation that is in charge of enforcement.",
         q3: "One right is the right to erasure (with conditions).",
         q4: "Sensitive personal data is a category of personal information that requires higher protection due to its potential for misuse",
-        q5: "This is the storage limitation principle."
+        q5: "This is the storage limitation principle.",
+        q6: "The best colours are red and green"
+
     };
 
     let score = 0;
-    const total = 5;
+    const total = 6;
     ;
 
 
@@ -78,6 +82,17 @@ function markQuiz() {
         setFeedback("q5", false, incorrectFeedback['q5']);
     }
 
+    let checkboxes = document.querySelectorAll('input[name="color"]:checked');
+    let values = [];
+    checkboxes.forEach((checkbox) => {
+        values.push(checkbox.value);
+    });
+
+
+    console.log(values);
+    console.log(answers['q6'])
+
+    score = score + getScore(values,   answers['q6'])
     // Update score display
     const scoreEl = document.getElementById("score");
     scoreEl.textContent = `Score: ${score} / ${total}`;
@@ -86,10 +101,10 @@ function markQuiz() {
 function resetQuiz() {
     // Clear radios
     document.querySelectorAll('input[type="radio"]').forEach(r => (r.checked = false));
-    
+
     // Reset selects
     let selects = document.getElementsByTagName('select')
-    for(let i=0; i<selects.length; i++){
+    for (let i = 0; i < selects.length; i++) {
         selects[i].selectedIndex = 0
     }
 
@@ -123,3 +138,15 @@ function setFeedback(questionID, isCorrect, message) {
         feedbackElement.textContent = "❌ Incorrect: " + message;
     }
 }
+
+function getScore(givenAnswers, correctAnswers){
+    let numCorrect = 0;
+    for(let i=0; i<correctAnswers.length; i++){
+        if (givenAnswers.indexOf(correctAnswers[i]) != -1){
+            numCorrect++;
+        }
+    }
+    return numCorrect;
+}
+
+console.log(getScore(["red","green"],["Blue","red"]));
