@@ -1,7 +1,7 @@
 
 function markQuiz() {
     //Dictionaries to store correct answers etc. Could have been a 2D array, but this might be more readable.
-    let answers = {
+    var answers = {
         q1: "gdpr",
         q2: "ico",
         q3: "erasure",
@@ -10,7 +10,7 @@ function markQuiz() {
         q6: ["red", "green"]
     };
 
-    let correctFeedback = {
+    var correctFeedback = {
         q1: "DPA 2018 aligns with the UK GDPR framework.",
         q2: "The ICO is a crown body and (as of 2026) its head (The Data Commissioner) is John Edwards",
         q3: "The right to erasure applies in specific circumstances.",
@@ -19,7 +19,7 @@ function markQuiz() {
         q6: "The best colours are red and green"
     };
 
-    let incorrectFeedback = {
+    var incorrectFeedback = {
         q1: "It implements the UK GDPR framework.",
         q2: "This is not the organisation that is in charge of enforcement.",
         q3: "One right is the right to erasure (with conditions).",
